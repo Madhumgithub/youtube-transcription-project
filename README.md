@@ -24,7 +24,7 @@ This project converts audio from YouTube videos into text. It utilizes `yt-dlp` 
 3. Set up a virtual environment and install dependencies:
    ```bash
    python -m venv env
-   source env/bin/activate  # On Windows use `env\Scriptsctivate`
+   source env/bin/activate  # On Windows use `env\Scripts\activate`
    pip install -r requirements.txt
    ```
 
