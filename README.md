@@ -24,23 +24,23 @@ You can install the required libraries using pip:
 
 ```bash
 pip install moviepy pydub SpeechRecognition
+
 Installation
-Clone the repository:
 
-bash
-Copy code
+1.Clone the repository:
+
 git clone https://github.com/Madhumgithub/youtube-transcription-project.git
-Navigate to the project directory:
 
-bash
-Copy code
+2.Navigate to the project directory:
+
 cd youtube-transcription-project
-Install the required packages:
 
-bash
-Copy code
+3.Install the required packages:
+
 pip install -r requirements.txt
+
 Usage
+
 Place your YouTube video file (e.g., audio1.mp4) in the project directory.
 
 Modify the video_path variable in the script to point to your video file:
