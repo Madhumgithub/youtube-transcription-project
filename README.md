@@ -1,27 +1,69 @@
 # YouTube Video Transcription Project
 
-## Objective
-The objective of this project is to convert YouTube videos to text using `yt-dlp` for downloading and the Wav2Vec2 model from Hugging Face's transformers library for transcription. This involves downloading videos, preprocessing audio, and transcribing speech into text.
+## Overview
+
+This project provides a comprehensive solution for converting audio from YouTube videos into text. Leveraging powerful libraries such as **MoviePy**, **Pydub**, and **SpeechRecognition**, the script extracts audio, detects silence, and transcribes speech accurately. This tool is designed for users who want to easily generate text transcriptions of video content, facilitating accessibility and content creation.
 
 ## Features
-- **Audio Preprocessing**: 
-  - Extracts audio from the video.
-  - Normalizes audio levels for consistent input quality.
-  
-- **Transcription**:
-  - Uses the Wav2Vec2 model for accurate speech-to-text conversion.
-  - Implements techniques to improve accuracy, such as noise reduction and audio segmentation.
 
-## Steps to Use
-1. Clone the repo.
-2. Set up a virtual environment.
-3. Install dependencies.
-4. Run the transcription script.
+- **Audio Extraction**: Extracts audio from YouTube video files using MoviePy.
+- **Silence Detection**: Identifies silence segments to improve transcription accuracy using Pydub.
+- **Speech-to-Text**: Transcribes audio into text using Google’s Speech Recognition API.
+- **Timestamping**: Generates transcriptions with timestamps for each segment.
+- **File Export**: Saves the transcription to a text file for easy reference.
 
-## Results
-- **Sample Transcripts**: 
-  - "This is a sample transcript of the first 30 seconds of the video."
-  
-- **Evaluation**:
-  - Accuracy: 95% on test dataset.
-  - Time taken for transcription: 3 minutes for a 10-minute audio clip.
+## Requirements
+
+To run this project, you'll need to have Python 3.x installed along with the following libraries:
+
+- `moviepy`
+- `pydub`
+- `speech_recognition`
+
+You can install the required libraries using pip:
+
+```bash
+pip install moviepy pydub SpeechRecognition
+Installation
+Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/Madhumgithub/youtube-transcription-project.git
+Navigate to the project directory:
+
+bash
+Copy code
+cd youtube-transcription-project
+Install the required packages:
+
+bash
+Copy code
+pip install -r requirements.txt
+Usage
+Place your YouTube video file (e.g., audio1.mp4) in the project directory.
+
+Modify the video_path variable in the script to point to your video file:
+
+python
+Copy code
+video_path = "C:\\path\\to\\your\\video\\audio1.mp4"
+Run the script:
+
+bash
+Copy code
+python src/YouTubeTranscriber.ipynb
+After the transcription is complete, you will find the output saved in Transcripted_Text.txt.
+
+Example Output
+csharp
+Copy code
+[0.000] Speaker: Hello everyone in this English episode we will be focusing on English conversation.
+[5.500] Speaker: Listening to English conversation is an essential part of improving your English language skills.
+...
+Error Handling
+The script includes error handling for common issues, such as:
+
+Audio extraction failures.
+Inability to understand audio by Google Speech Recognition.
+Network issues while requesting results from the Speech Recognition service.
